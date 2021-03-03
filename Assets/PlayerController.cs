@@ -63,23 +63,23 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy1")
         {
-            if (GlobalVariables.globalvars.playerHealth == 1)
+            if (GlobalVariables.globalvars.playerHealth <= 10)
             {
                 Destroy(gameObject);
             } else
             {
-                GlobalVariables.globalvars.playerHealth -= 1;
+                GlobalVariables.globalvars.playerHealth -= 10;
             }
         }
         if (collision.gameObject.tag == "Enemy2")
         {
-            if (GlobalVariables.globalvars.playerHealth <= 2)
+            if (GlobalVariables.globalvars.playerHealth <= 20)
             {
                 Destroy(gameObject);
             }
             else
             {
-                GlobalVariables.globalvars.playerHealth -= 2;
+                GlobalVariables.globalvars.playerHealth -= 20;
             }
         }
     }
