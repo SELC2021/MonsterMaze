@@ -8,7 +8,7 @@ public class GlobalVariables : MonoBehaviour
     public static class globalvars
     {
         public static int moneyAmount = 0;
-        public static int playerHealth = 100;
+        public static int playerHealth = 10;
         public static int playerStrength = 100;
         public static int armorLevel = 1;
         public static int weaponLevel = 1;
@@ -27,12 +27,12 @@ public class GlobalVariables : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
