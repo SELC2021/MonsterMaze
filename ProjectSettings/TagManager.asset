@@ -19,7 +19,7 @@ TagManager:
   - Background
   - Foreground
   - MiddleGroup
-  - 
+  - Top
   - 
   - 
   - 
@@ -52,4 +52,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1206459879
+    locked: 0
+  - name: Top
+    uniqueID: 1458344649
     locked: 0
