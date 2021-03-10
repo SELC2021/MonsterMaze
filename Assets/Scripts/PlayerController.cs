@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -90,6 +92,10 @@ public class PlayerController : MonoBehaviour
                 GlobalVariables.globalvars.playerHealth -= 20;
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
             }
+        }
+        if (collision.gameObject.tag == "End")
+        {
+            SceneManager.LoadScene(sceneName: "MainMenu");
         }
     }
 }
