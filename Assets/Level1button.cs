@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level1button : MonoBehaviour
 {
     public void clickedOnButton()
     {
-        Debug.Log("Replace with however you get to Scene 1");
+
+        SceneManager.LoadScene(sceneName: "Maze1");
     }
 }
