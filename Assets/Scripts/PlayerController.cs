@@ -5,9 +5,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float speed = 0.5f; 
+    public float speed = 0.5f;
     private float movement = 0f;
     private Rigidbody2D rigidBody;
+
+    public HealthBar healthBar; //added
 
     public bool lookright = true;
 
@@ -15,6 +17,9 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+
+        healthBar.SetMaxHealth(GlobalVariables.globalvars.playerHealth); //added
+
     }
 
     // Update is called once per frame
@@ -66,9 +71,11 @@ public class PlayerController : MonoBehaviour
             if (GlobalVariables.globalvars.playerHealth <= 10)
             {
                 Destroy(gameObject);
+                healthBar.SetHealth(0);  //added
             } else
             {
                 GlobalVariables.globalvars.playerHealth -= 10;
+                healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
             }
         }
         if (collision.gameObject.tag == "Enemy2")
@@ -76,10 +83,12 @@ public class PlayerController : MonoBehaviour
             if (GlobalVariables.globalvars.playerHealth <= 20)
             {
                 Destroy(gameObject);
+                healthBar.SetHealth(0);  //added
             }
             else
             {
                 GlobalVariables.globalvars.playerHealth -= 20;
+                healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
             }
         }
     }
