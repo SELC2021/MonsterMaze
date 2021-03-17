@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
             if (GlobalVariables.globalvars.playerHealth <= 10)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene(sceneName: "MainMenu");
                 healthBar.SetHealth(0);  //added
             } else
             {
@@ -85,6 +86,7 @@ public class PlayerController : MonoBehaviour
             if (GlobalVariables.globalvars.playerHealth <= 20)
             {
                 Destroy(gameObject);
+                SceneManager.LoadScene(sceneName: "MainMenu");
                 healthBar.SetHealth(0);  //added
             }
             else
