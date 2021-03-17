@@ -7,5 +7,7 @@ public class Level3Button : MonoBehaviour
     public void clickedOnButton()
     {
         Debug.Log("Replace with however you get to Scene 3");
+        GlobalVariables.globalvars.playerHealth = 100;
+
     }
 }

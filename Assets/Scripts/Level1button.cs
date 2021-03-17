@@ -9,5 +9,7 @@ public class Level1button : MonoBehaviour
     {
 
         SceneManager.LoadScene(sceneName: "Maze1");
+        GlobalVariables.globalvars.playerHealth = 100;
+
     }
 }
