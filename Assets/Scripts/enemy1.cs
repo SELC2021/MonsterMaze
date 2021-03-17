@@ -20,7 +20,7 @@ public class enemy1 : MonoBehaviour
         if (distance < 8f)
         {
             position = gameObject.transform.position;
-            target = GameObject.Find("Head").transform.position;
+            target = GameObject.Find("Wizard Variant").transform.position;
             transform.position = Vector2.MoveTowards(transform.position, target, .01f);
         }
     }
