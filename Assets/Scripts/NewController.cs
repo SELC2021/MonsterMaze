@@ -53,7 +53,7 @@ public class NewController : MonoBehaviour
             direction = -1;
             moveVelocity = Vector3.left;
 
-            transform.localScale = new Vector3(direction, 1, 1);
+            transform.localScale = new Vector3(direction * .5f, .5f, 1);
             if (!anim.GetBool("isJump"))
                 anim.SetBool("isRun", true);
 
@@ -63,11 +63,33 @@ public class NewController : MonoBehaviour
             direction = 1;
             moveVelocity = Vector3.right;
 
-            transform.localScale = new Vector3(direction, 1, 1);
+            transform.localScale = new Vector3(direction * .5f, .5f, 1);
             if (!anim.GetBool("isJump"))
                 anim.SetBool("isRun", true);
 
         }
+        if (Input.GetAxisRaw("Vertical") > 0)
+        {
+
+          moveVelocity = Vector3.up;
+
+          transform.localScale = new Vector3(.5f, direction * .5f, 1);
+          if (!anim.GetBool("isJump"))
+              anim.SetBool("isRun", true);
+
+        }
+        if (Input.GetAxisRaw("Vertical") < 0)
+        {
+
+          moveVelocity = Vector3.down;
+
+          //transform.localScale = new Vector3(.5f, -(direction * .5f), 1);
+          if (!anim.GetBool("isJump"))
+              anim.SetBool("isRun", true);
+
+        }
+
+
         transform.position += moveVelocity * movePower * Time.deltaTime;
     }
 
