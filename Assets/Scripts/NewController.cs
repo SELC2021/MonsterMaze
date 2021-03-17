@@ -52,7 +52,7 @@ public class NewController : MonoBehaviour
             direction = -1;
             moveVelocity = Vector3.left;
 
-            transform.localScale = new Vector3(direction * .5f, .5f, 1);
+            transform.localScale = new Vector3(direction * .3f, .3f, 1);
             if (!anim.GetBool("isJump"))
                 anim.SetBool("isRun", true);
 
@@ -62,7 +62,7 @@ public class NewController : MonoBehaviour
             direction = 1;
             moveVelocity = Vector3.right;
 
-            transform.localScale = new Vector3(direction * .5f, .5f, 1);
+            transform.localScale = new Vector3(direction * .3f, .3f, 1);
             if (!anim.GetBool("isJump"))
                 anim.SetBool("isRun", true);
 
