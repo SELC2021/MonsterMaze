@@ -10,7 +10,7 @@ public class enemy1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class enemy1 : MonoBehaviour
         if (distance < 10f)
         {
             position = gameObject.transform.position;
-            target = GameObject.Find("Head").transform.position;
+            target = GameObject.Find("Wizard Variant").transform.position;
             transform.position = Vector2.MoveTowards(transform.position, target, .01f);
         }
     }
