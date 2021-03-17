@@ -12,7 +12,6 @@ public class NewController : MonoBehaviour
     private Animator anim;
     Vector3 movement;
     private int direction = 1;
-    bool isJumping = false;
     private bool alive = true;
 
     // Start is called before the first frame update
@@ -37,7 +36,7 @@ public class NewController : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        anim.SetBool("isJump", false);
+
     }
 
     // wizard stuff
@@ -73,7 +72,7 @@ public class NewController : MonoBehaviour
 
           moveVelocity = Vector3.up;
 
-          transform.localScale = new Vector3(.5f, direction * .5f, 1);
+          //transform.localScale = new Vector3(.5f, direction * .5f, 1);
           if (!anim.GetBool("isJump"))
               anim.SetBool("isRun", true);
 
