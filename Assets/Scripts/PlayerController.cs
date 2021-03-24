@@ -15,6 +15,13 @@ public class PlayerController : MonoBehaviour
 
     public bool lookright = true;
 
+      // healthBar.SetHealth(100);
+      // GlobalVariables.globalvars.moneyAmount = 0;
+      // GlobalVariables.globalvars.playerStrength = 100;
+      // GlobalVariables.globalvars.armorLevel = 1;
+      // GlobalVariables.globalvars.weaponLevel = 1;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +35,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        // Fliping
+        // Flipping
         if(rigidBody.velocity.x > 0 && !lookright || rigidBody.velocity.x <0 && lookright){
           Flip();
         }
@@ -73,8 +80,8 @@ public class PlayerController : MonoBehaviour
             if (GlobalVariables.globalvars.playerHealth <= 10)
             {
                 Destroy(gameObject);
-                SceneManager.LoadScene(sceneName: "MainMenu");
                 healthBar.SetHealth(0);  //added
+                SceneManager.LoadScene(sceneName: "MainMenu");
             } else
             {
                 GlobalVariables.globalvars.playerHealth -= 10;
@@ -98,6 +105,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "End")
         {
             SceneManager.LoadScene(sceneName: "MainMenu");
+            GlobalVariables.globalvars.level2 = true;
         }
+        if (collision.gameObject.tag == "End2")
+        {
+            SceneManager.LoadScene(sceneName: "MainMenu");
+            GlobalVariables.globalvars.level3 = true;
+        }
+
     }
 }

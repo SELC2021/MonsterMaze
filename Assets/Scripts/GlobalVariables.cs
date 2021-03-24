@@ -12,6 +12,8 @@ public class GlobalVariables : MonoBehaviour
         public static int playerStrength = 100;
         public static int armorLevel = 1;
         public static int weaponLevel = 1;
+        public static bool level2 = false;
+        public static bool level3 = false;
     }
     public Text moneyText;
 

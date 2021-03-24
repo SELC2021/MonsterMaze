@@ -10,6 +10,6 @@ public class MainMenu : MonoBehaviour
     public void clickedOnButton()
     {
         SceneManager.LoadScene(sceneName: "MainMenu");
-
+        GlobalVariables.globalvars.playerHealth = 100;
     }
 }
