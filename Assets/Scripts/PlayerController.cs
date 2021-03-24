@@ -10,9 +10,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0.5f;
     private float movement = 0f;
     private Rigidbody2D rigidBody;
-
     public HealthBar healthBar; //added
-
     public bool lookright = true;
 
 
@@ -22,6 +20,8 @@ public class PlayerController : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
 
         healthBar.SetMaxHealth(GlobalVariables.globalvars.playerHealth); //added
+
+
 
     }
 
@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+      // collision with enemy1
         if (collision.gameObject.tag == "Enemy1")
         {
             if (GlobalVariables.globalvars.playerHealth <= 10)
@@ -82,6 +83,8 @@ public class PlayerController : MonoBehaviour
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
             }
         }
+
+        // collision with enemy 2
         if (collision.gameObject.tag == "Enemy2")
         {
             if (GlobalVariables.globalvars.playerHealth <= 20)
@@ -96,11 +99,14 @@ public class PlayerController : MonoBehaviour
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
             }
         }
+
+        // Portal Home
         if (collision.gameObject.tag == "End")
         {
             SceneManager.LoadScene(sceneName: "MainMenu");
             GlobalVariables.globalvars.level2 = true;
         }
+
         if (collision.gameObject.tag == "End2")
         {
             SceneManager.LoadScene(sceneName: "MainMenu");

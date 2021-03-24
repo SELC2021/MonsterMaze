@@ -19,6 +19,6 @@ public class MoneyText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SetText("$" + GlobalVariables.globalvars.moneyAmount);
+        SetText("Money: $" + GlobalVariables.globalvars.moneyAmount + "  Gems: " + GlobalVariables.globalvars.gemAmount);
     }
 }
