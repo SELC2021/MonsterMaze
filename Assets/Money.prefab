@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: $0
+  m_Text: 'Money: $  Gems:'
 --- !u!114 &3718037943081595628
 MonoBehaviour:
   m_ObjectHideFlags: 0
