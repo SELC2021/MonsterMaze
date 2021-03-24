@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/mainMenu.unity
     guid: 1552cf5594a36e04593848e02d8f8dd2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Maze1.unity
     guid: 2fbe06e6c1268da46b01b41a8d60c143
   - enabled: 1
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/cake.unity
     guid: 20d780c2de651cf4f9c35906fae4f1f4
+  - enabled: 1
+    path: Assets/Scenes/Maze1.unity
+    guid: 12ccf22f996333f4d9eac9746fe8f9ff
   m_configObjects: {}
