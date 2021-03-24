@@ -15,12 +15,6 @@ public class PlayerController : MonoBehaviour
 
     public bool lookright = true;
 
-      // healthBar.SetHealth(100);
-      // GlobalVariables.globalvars.moneyAmount = 0;
-      // GlobalVariables.globalvars.playerStrength = 100;
-      // GlobalVariables.globalvars.armorLevel = 1;
-      // GlobalVariables.globalvars.weaponLevel = 1;
-
 
     // Start is called before the first frame update
     void Start()
@@ -84,7 +78,7 @@ public class PlayerController : MonoBehaviour
                 SceneManager.LoadScene(sceneName: "MainMenu");
             } else
             {
-                GlobalVariables.globalvars.playerHealth -= 10;
+                GlobalVariables.globalvars.playerHealth -= GlobalVariables.globalvars.enemyPower;
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
             }
         }
@@ -98,7 +92,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                GlobalVariables.globalvars.playerHealth -= 20;
+                GlobalVariables.globalvars.playerHealth -= (GlobalVariables.globalvars.enemyPower * 2);
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
             }
         }
