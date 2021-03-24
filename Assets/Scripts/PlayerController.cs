@@ -105,6 +105,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "End")
         {
             SceneManager.LoadScene(sceneName: "MainMenu");
+            GlobalVariables.globalvars.level2 = true;
         }
+        if (collision.gameObject.tag == "End2")
+        {
+            SceneManager.LoadScene(sceneName: "MainMenu");
+            GlobalVariables.globalvars.level3 = true;
+        }
+
     }
 }
