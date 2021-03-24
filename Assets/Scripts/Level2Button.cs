@@ -12,6 +12,7 @@ public class Level2Button : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName: "Scene2");
             GlobalVariables.globalvars.playerHealth = 100;
+            GlobalVariables.globalvars.moneyAmount = 0;
         } else
         {
             Debug.Log("Complete Maze 1 to unlock");
