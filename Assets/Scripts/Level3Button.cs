@@ -6,8 +6,13 @@ public class Level3Button : MonoBehaviour
 {
     public void clickedOnButton()
     {
-        Debug.Log("Replace with however you get to Scene 3");
-        GlobalVariables.globalvars.playerHealth = 100;
-
+        if (GlobalVariables.globalvars.level3 == true)
+        {
+            Debug.Log("Replace with however you get to Scene 3");
+            GlobalVariables.globalvars.playerHealth = 100;
+        } else
+        {
+            Debug.Log("Complete Maze 2 to unlock");
+        }
     }
 }
