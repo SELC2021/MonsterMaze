@@ -73,7 +73,7 @@ public class NewController : MonoBehaviour
 
           moveVelocity = Vector3.up;
 
-          transform.localScale = new Vector3(.5f, direction * .5f, 1);
+          //transform.localScale = new Vector3(.5f, direction * .5f, 1);
           if (!anim.GetBool("isJump"))
               anim.SetBool("isRun", true);
 
