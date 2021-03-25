@@ -18,7 +18,7 @@ public class GemsC : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-      if (collision.gameObject.tag == "Wizard Varient")
+      if (collision.gameObject.tag == "Player")
       {
             Destroy(gameObject);
             GlobalVariables.globalvars.gemAmount++;

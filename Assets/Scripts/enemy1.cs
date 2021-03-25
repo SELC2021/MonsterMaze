@@ -16,7 +16,7 @@ public class enemy1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(GameObject.FindWithTag("Wizard Variant").transform.position, transform.position);
+        float distance = Vector3.Distance(GameObject.FindWithTag("Player").transform.position, transform.position);
         if (distance < 8f)
         {
             position = gameObject.transform.position;
