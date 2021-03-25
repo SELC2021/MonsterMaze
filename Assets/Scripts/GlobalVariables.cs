@@ -15,6 +15,8 @@ public class GlobalVariables : MonoBehaviour
         public static int weaponLevel = 1;
         public static bool level2 = false;
         public static bool level3 = false;
+
+        public static int enemyPower = 10;
     }
     public Text moneyText;
 
