@@ -154,11 +154,11 @@ public class NewController : MonoBehaviour
             {
                 GlobalVariables.globalvars.playerHealth -= 20;
             }
-
-            if (collision.gameObject.tag == "GemsC"){
-               GlobalVariables.globalvars.gemAmount ++;
-            }
         }
 
+        if (collision.gameObject.tag == "GemsC"){
+           GlobalVariables.globalvars.gemAmount ++;
+        }
+        
     }
 }

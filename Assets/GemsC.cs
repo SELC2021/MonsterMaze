@@ -24,5 +24,11 @@ public class GemsC : MonoBehaviour
             GlobalVariables.globalvars.gemAmount++;
       }
 
+      if (collision.gameObject.tag == "Wizard Variant")
+      {
+            Destroy(gameObject);
+            GlobalVariables.globalvars.gemAmount++;
+      }
+
     }
 }
