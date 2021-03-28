@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
         healthBar.SetMaxHealth(GlobalVariables.globalvars.playerHealth); //added
 
+        Debug.Log("player health: " + GlobalVariables.globalvars.playerHealth); //TEST
+
 
 
     }
@@ -79,8 +81,9 @@ public class PlayerController : MonoBehaviour
                 SceneManager.LoadScene(sceneName: "MainMenu");
             } else
             {
-                GlobalVariables.globalvars.playerHealth -= GlobalVariables.globalvars.enemyPower;
+                GlobalVariables.globalvars.playerHealth = GlobalVariables.globalvars.playerHealth - GlobalVariables.globalvars.enemyPower; //TEST
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
+                Debug.Log("player health: " + GlobalVariables.globalvars.playerHealth); //TEST
             }
         }
 
@@ -97,6 +100,7 @@ public class PlayerController : MonoBehaviour
             {
                 GlobalVariables.globalvars.playerHealth -= (GlobalVariables.globalvars.enemyPower * 2);
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
+                Debug.Log("player health: " + GlobalVariables.globalvars.playerHealth); //TEST
             }
         }
 

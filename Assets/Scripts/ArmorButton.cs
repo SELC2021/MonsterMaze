@@ -10,7 +10,10 @@ public class ArmorButton : MonoBehaviour
         if (GlobalVariables.globalvars.moneyAmount >= GlobalVariables.globalvars.armorLevel * 10)
         {
             GlobalVariables.globalvars.moneyAmount -= GlobalVariables.globalvars.armorLevel * 10;
-            GlobalVariables.globalvars.playerHealth += 1;
+            //GlobalVariables.globalvars.playerHealth += 1;
+            if(GlobalVariables.globalvars.enemyPower > 1){
+              GlobalVariables.globalvars.enemyPower -= 1;
+            }
             GlobalVariables.globalvars.armorLevel += 1;
 
         } else
