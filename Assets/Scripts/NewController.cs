@@ -67,6 +67,7 @@ public class NewController : MonoBehaviour
                 anim.SetBool("isRun", true);
 
         }
+
         if (Input.GetAxisRaw("Vertical") > 0)
         {
 
@@ -159,6 +160,6 @@ public class NewController : MonoBehaviour
         if (collision.gameObject.tag == "GemsC"){
            GlobalVariables.globalvars.gemAmount ++;
         }
-        
+
     }
 }
