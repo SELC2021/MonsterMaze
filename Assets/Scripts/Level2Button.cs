@@ -13,6 +13,10 @@ public class Level2Button : MonoBehaviour
             SceneManager.LoadScene(sceneName: "Scene2");
             GlobalVariables.globalvars.playerHealth = 100;
             GlobalVariables.globalvars.moneyAmount = 0;
+<<<<<<< HEAD
+=======
+            GlobalVariables.globalvars.armorLevel = 1;
+>>>>>>> 41aa107e5c3c61201fe2fe19aa41289a5ffec30e
             GlobalVariables.globalvars.enemyPower = 10;
         } else
         {

@@ -11,6 +11,10 @@ public class Level3Button : MonoBehaviour
             Debug.Log("Replace with however you get to Scene 3");
             GlobalVariables.globalvars.playerHealth = 100;
             GlobalVariables.globalvars.moneyAmount = 0;
+<<<<<<< HEAD
+=======
+            GlobalVariables.globalvars.armorLevel = 1;
+>>>>>>> 41aa107e5c3c61201fe2fe19aa41289a5ffec30e
             GlobalVariables.globalvars.enemyPower = 10;
         } else
         {
