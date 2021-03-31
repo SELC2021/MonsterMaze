@@ -11,6 +11,7 @@ public class Level3Button : MonoBehaviour
             Debug.Log("Replace with however you get to Scene 3");
             GlobalVariables.globalvars.playerHealth = 100;
             GlobalVariables.globalvars.moneyAmount = 0;
+            GlobalVariables.globalvars.enemyPower = 10;
         } else
         {
             Debug.Log("Complete Maze 2 to unlock");
