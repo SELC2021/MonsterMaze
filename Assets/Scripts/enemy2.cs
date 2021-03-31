@@ -21,7 +21,7 @@ public class enemy2 : MonoBehaviour
         {
             position = gameObject.transform.position;
             target = GameObject.Find("Wizard Variant").transform.position;
-            transform.position = Vector2.MoveTowards(transform.position, target, .015f);
+            transform.position = Vector2.MoveTowards(transform.position, target, .02f);
         }
     }
     private void OnMouseDown()
