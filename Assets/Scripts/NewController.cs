@@ -135,27 +135,6 @@ public class NewController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy1")
-        {
-            if (GlobalVariables.globalvars.playerHealth <= 10)
-            {
-                Destroy(gameObject);
-            } else
-            {
-                GlobalVariables.globalvars.playerHealth -= 10;
-            }
-        }
-        if (collision.gameObject.tag == "Enemy2")
-        {
-            if (GlobalVariables.globalvars.playerHealth <= 20)
-            {
-                Destroy(gameObject);
-            }
-            else
-            {
-                GlobalVariables.globalvars.playerHealth -= 20;
-            }
-        }
 
         if (collision.gameObject.tag == "GemsC"){
            GlobalVariables.globalvars.gemAmount ++;
