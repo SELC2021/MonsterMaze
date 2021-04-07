@@ -74,7 +74,11 @@ public class PlayerController : MonoBehaviour
       // collision with enemy1
         if (collision.gameObject.tag == "Enemy1")
         {
+<<<<<<< HEAD
             if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower)
+=======
+            if (GlobalVariables.globalvars.playerHealth <= 0)
+>>>>>>> e99bdbd19a99aec951a2a213b474c513c30a812e
             {
                 Destroy(gameObject);
                 healthBar.SetHealth(0);  //added
