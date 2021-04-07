@@ -16,11 +16,12 @@ public class cat : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(GameObject.FindWithTag("Player").transform.position, transform.position);
-        if (distance > 3f)
-        {
+ 
             position = gameObject.transform.position;
             target = GameObject.Find("Wizard Variant").transform.position; //needs to say "Wizard Variant" to follow wizard girl
-            transform.position = Vector2.MoveTowards(transform.position, target, .02f);
+        if (distance > 3f)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, .01f);
         }
     }
 }
