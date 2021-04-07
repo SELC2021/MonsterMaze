@@ -118,6 +118,9 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene(sceneName: "MainMenu");
             GlobalVariables.globalvars.level3 = true;
         }
-
+        if (collision.gameObject.tag == "End3")
+        {
+            SceneManager.LoadScene(sceneName: "cake");
+        }
     }
 }
