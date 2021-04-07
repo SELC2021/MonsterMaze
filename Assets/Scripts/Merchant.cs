@@ -17,7 +17,14 @@ public class Merchant : MonoBehaviour
     }
 
     private void OnMouseDown(){
-
-      
+      if(GlobalVariables.globalvars.gemAmount >= 5){
+            Debug.Log("Gem amount: " + GlobalVariables.globalvars.gemAmount + " Potions: " + GlobalVariables.globalvars.potions); //test print statement
+            GlobalVariables.globalvars.moneyAmount -= 5;
+            GlobalVariables.globalvars.potions += 1;
+            Debug.Log("Gem amount: " + GlobalVariables.globalvars.gemAmount + " Potions: " + GlobalVariables.globalvars.potions); //test print statement
+      }
+      else{
+            Debug.Log("Not Enough Money");
+      }
     }
 }

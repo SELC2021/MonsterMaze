@@ -506,7 +506,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &322491207
 GameObject:
@@ -2184,6 +2184,7 @@ GameObject:
   - component: {fileID: 1387150502}
   - component: {fileID: 1387150504}
   - component: {fileID: 1387150503}
+  - component: {fileID: 1387150505}
   m_Layer: 0
   m_Name: Knight_idle_04
   m_TagString: Untagged
@@ -2285,6 +2286,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1387150505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387150500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.245853, y: 13.437133, z: 0.2}
+  m_Center: {x: 0.30054665, y: -5.518338, z: 0}
 --- !u!1 &1634923698
 GameObject:
   m_ObjectHideFlags: 0
@@ -2517,7 +2531,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1458344649
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 1000
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 1.265625, y: 1.84375, z: 0}
