@@ -108,7 +108,7 @@ public class PlayerController : MonoBehaviour
         // collision with enemy 3
         if (collision.gameObject.tag == "Enemy3")
         {
-            if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower * 5) ;
+            if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower * 5) 
             {
                 Destroy(gameObject);
                 SceneManager.LoadScene(sceneName: "MainMenu");
