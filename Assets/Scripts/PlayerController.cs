@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
       // collision with enemy1
         if (collision.gameObject.tag == "Enemy1")
         {
-            if (GlobalVariables.globalvars.playerHealth <= 10)
+            if (GlobalVariables.globalvars.playerHealth <= 0)
             {
                 Destroy(gameObject);
                 healthBar.SetHealth(0);  //added
