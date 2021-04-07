@@ -74,7 +74,11 @@ public class PlayerController : MonoBehaviour
       // collision with enemy1
         if (collision.gameObject.tag == "Enemy1")
         {
-            if (GlobalVariables.globalvars.playerHealth <= 10)
+<<<<<<< HEAD
+            if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower)
+=======
+            if (GlobalVariables.globalvars.playerHealth <= 0)
+>>>>>>> e99bdbd19a99aec951a2a213b474c513c30a812e
             {
                 Destroy(gameObject);
                 healthBar.SetHealth(0);  //added
@@ -91,7 +95,7 @@ public class PlayerController : MonoBehaviour
         // collision with enemy 2
         if (collision.gameObject.tag == "Enemy2")
         {
-            if (GlobalVariables.globalvars.playerHealth <= 20)
+            if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower * 2)
             {
                 Destroy(gameObject);
                 SceneManager.LoadScene(sceneName: "MainMenu");
@@ -100,6 +104,23 @@ public class PlayerController : MonoBehaviour
             else
             {
                 GlobalVariables.globalvars.playerHealth -= (GlobalVariables.globalvars.enemyPower * 2);
+                healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
+                Debug.Log("player health: " + GlobalVariables.globalvars.playerHealth); //TEST
+                Debug.Log("Enemy power: " + GlobalVariables.globalvars.enemyPower); //TEST
+            }
+        }
+        // collision with enemy 3
+        if (collision.gameObject.tag == "Enemy3")
+        {
+            if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower * 5) 
+            {
+                Destroy(gameObject);
+                SceneManager.LoadScene(sceneName: "MainMenu");
+                healthBar.SetHealth(0);  //added
+            }
+            else
+            {
+                GlobalVariables.globalvars.playerHealth -= (GlobalVariables.globalvars.enemyPower * 5);
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
                 Debug.Log("player health: " + GlobalVariables.globalvars.playerHealth); //TEST
                 Debug.Log("Enemy power: " + GlobalVariables.globalvars.enemyPower); //TEST
