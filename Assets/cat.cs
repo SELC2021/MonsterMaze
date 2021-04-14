@@ -9,7 +9,7 @@ public class cat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,14 +18,11 @@ public class cat : MonoBehaviour
         position = gameObject.transform.position;
 
         float distance = Vector3.Distance(GameObject.FindWithTag("Player").transform.position, transform.position);
- 
+
             target = GameObject.Find("Wizard Variant").transform.position; //needs to say "Wizard Variant" to follow wizard girl
-        if (distance < 8f)
+        if (distance < 8f && distance > 3f)
         {
-            if (distance > 3f)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, target, .01f);
-            }
+              transform.position = Vector2.MoveTowards(transform.position, target, .01f);
         }
     }
 }
