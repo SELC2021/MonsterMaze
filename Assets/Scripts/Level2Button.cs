@@ -15,6 +15,7 @@ public class Level2Button : MonoBehaviour
             GlobalVariables.globalvars.moneyAmount = 0;
 
             GlobalVariables.globalvars.armorLevel = 1;
+            GlobalVariables.globalvars.weaponLevel = 1;
             GlobalVariables.globalvars.enemyPower = 10;
         } else
         {

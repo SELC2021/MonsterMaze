@@ -12,6 +12,7 @@ public class Level1button : MonoBehaviour
         GlobalVariables.globalvars.playerHealth = 100;
         GlobalVariables.globalvars.moneyAmount = 0;
         GlobalVariables.globalvars.armorLevel = 1;
+        GlobalVariables.globalvars.weaponLevel = 1;
         GlobalVariables.globalvars.enemyPower = 10;
 
     }
