@@ -20,6 +20,6 @@ public class MoneyText : MonoBehaviour
     void Update()
     {
         int gems = GlobalVariables.globalvars.newGems + GlobalVariables.globalvars.gemAmount;
-        SetText("Money: $" + GlobalVariables.globalvars.moneyAmount + "  Gems: " + gems);
+        SetText("Money: $" + GlobalVariables.globalvars.moneyAmount + "  Gems: " + gems + "  Potions: " + GlobalVariables.globalvars.potions);
     }
 }
