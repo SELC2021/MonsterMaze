@@ -8,6 +8,7 @@ public class GlobalVariables : MonoBehaviour
     public static class globalvars
     {
         public static int gemAmount = 0;
+        public static int newGems = 0;
         public static int moneyAmount = 0;
         public static int playerHealth = 100;
         public static int playerStrength = 100;
