@@ -318,7 +318,6 @@ GameObject:
   m_Component:
   - component: {fileID: 100512399}
   - component: {fileID: 100512398}
-  - component: {fileID: 100512397}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -326,14 +325,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &100512397
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100512396}
-  m_Enabled: 1
 --- !u!20 &100512398
 Camera:
   m_ObjectHideFlags: 0
@@ -2169,6 +2160,7 @@ GameObject:
   - component: {fileID: 1387150502}
   - component: {fileID: 1387150504}
   - component: {fileID: 1387150503}
+  - component: {fileID: 1387150505}
   m_Layer: 0
   m_Name: Knight_idle_04
   m_TagString: Untagged
@@ -2270,6 +2262,19 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &1387150505
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387150500}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.245853, y: 13.437133, z: 0.2}
+  m_Center: {x: 0.30054665, y: -5.518338, z: 0}
 --- !u!1 &1634923698
 GameObject:
   m_ObjectHideFlags: 0
