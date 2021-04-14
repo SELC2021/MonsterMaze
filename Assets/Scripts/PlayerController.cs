@@ -82,7 +82,9 @@ public class PlayerController : MonoBehaviour
                 GlobalVariables.globalvars.weaponLevel = 1; //added
                 GlobalVariables.globalvars.enemyPower = 10; //added
                 SceneManager.LoadScene(sceneName: "MainMenu");
-            } else
+                GlobalVariables.globalvars.newGems = 0;
+            }
+            else
             {
                 GlobalVariables.globalvars.playerHealth = GlobalVariables.globalvars.playerHealth - GlobalVariables.globalvars.enemyPower; //TEST
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
@@ -102,6 +104,8 @@ public class PlayerController : MonoBehaviour
                 GlobalVariables.globalvars.armorLevel = 1; //added
                 GlobalVariables.globalvars.weaponLevel = 1; //added
                 GlobalVariables.globalvars.enemyPower = 10; //added
+                GlobalVariables.globalvars.newGems = 0;
+
             }
             else
             {
@@ -122,6 +126,7 @@ public class PlayerController : MonoBehaviour
                 GlobalVariables.globalvars.armorLevel = 1; //added
                 GlobalVariables.globalvars.weaponLevel = 1; //added
                 GlobalVariables.globalvars.enemyPower = 10; //added
+                GlobalVariables.globalvars.newGems = 0;
             }
             else
             {
@@ -140,6 +145,8 @@ public class PlayerController : MonoBehaviour
             GlobalVariables.globalvars.armorLevel = 1; //added
             GlobalVariables.globalvars.weaponLevel = 1; //added
             GlobalVariables.globalvars.enemyPower = 10; //added
+            GlobalVariables.globalvars.gemAmount += GlobalVariables.globalvars.newGems;
+            GlobalVariables.globalvars.newGems = 0;
         }
 
         if (collision.gameObject.tag == "End2")
@@ -149,6 +156,10 @@ public class PlayerController : MonoBehaviour
             GlobalVariables.globalvars.armorLevel = 1; //added
             GlobalVariables.globalvars.weaponLevel = 1; //added
             GlobalVariables.globalvars.enemyPower = 10; //added
+            GlobalVariables.globalvars.gemAmount += GlobalVariables.globalvars.newGems;
+            GlobalVariables.globalvars.newGems = 0;
+
+
         }
         if (collision.gameObject.tag == "End3")
         {
