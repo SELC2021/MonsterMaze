@@ -15,13 +15,17 @@ public class cat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        position = gameObject.transform.position;
+
         float distance = Vector3.Distance(GameObject.FindWithTag("Player").transform.position, transform.position);
  
-            position = gameObject.transform.position;
             target = GameObject.Find("Wizard Variant").transform.position; //needs to say "Wizard Variant" to follow wizard girl
-        if (distance > 3f)
+        if (distance < 8f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target, .01f);
+            if (distance > 3f)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, target, .01f);
+            }
         }
     }
 }
