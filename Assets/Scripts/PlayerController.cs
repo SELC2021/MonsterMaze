@@ -78,6 +78,9 @@ public class PlayerController : MonoBehaviour
             {
                 Destroy(gameObject);
                 healthBar.SetHealth(0);  //added
+                GlobalVariables.globalvars.armorLevel = 1; //added
+                GlobalVariables.globalvars.weaponLevel = 1; //added
+                GlobalVariables.globalvars.enemyPower = 10; //added
                 SceneManager.LoadScene(sceneName: "MainMenu");
             } else
             {
@@ -96,6 +99,9 @@ public class PlayerController : MonoBehaviour
                 Destroy(gameObject);
                 SceneManager.LoadScene(sceneName: "MainMenu");
                 healthBar.SetHealth(0);  //added
+                GlobalVariables.globalvars.armorLevel = 1; //added
+                GlobalVariables.globalvars.weaponLevel = 1; //added
+                GlobalVariables.globalvars.enemyPower = 10; //added
             }
             else
             {
@@ -108,11 +114,14 @@ public class PlayerController : MonoBehaviour
         // collision with enemy 3
         if (collision.gameObject.tag == "Enemy3")
         {
-            if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower * 5) 
+            if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower * 5)
             {
                 Destroy(gameObject);
                 SceneManager.LoadScene(sceneName: "MainMenu");
                 healthBar.SetHealth(0);  //added
+                GlobalVariables.globalvars.armorLevel = 1; //added
+                GlobalVariables.globalvars.weaponLevel = 1; //added
+                GlobalVariables.globalvars.enemyPower = 10; //added
             }
             else
             {
@@ -128,12 +137,18 @@ public class PlayerController : MonoBehaviour
         {
             SceneManager.LoadScene(sceneName: "MainMenu");
             GlobalVariables.globalvars.level2 = true;
+            GlobalVariables.globalvars.armorLevel = 1; //added
+            GlobalVariables.globalvars.weaponLevel = 1; //added
+            GlobalVariables.globalvars.enemyPower = 10; //added
         }
 
         if (collision.gameObject.tag == "End2")
         {
             SceneManager.LoadScene(sceneName: "MainMenu");
             GlobalVariables.globalvars.level3 = true;
+            GlobalVariables.globalvars.armorLevel = 1; //added
+            GlobalVariables.globalvars.weaponLevel = 1; //added
+            GlobalVariables.globalvars.enemyPower = 10; //added
         }
         if (collision.gameObject.tag == "End3")
         {
