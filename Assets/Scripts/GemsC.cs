@@ -21,13 +21,13 @@ public class GemsC : MonoBehaviour
       if (collision.gameObject.tag == "Player")
       {
             Destroy(gameObject);
-            GlobalVariables.globalvars.gemAmount++;
+            GlobalVariables.globalvars.newGems++;
       }
 
       if (collision.gameObject.tag == "Wizard Variant")
       {
             Destroy(gameObject);
-            GlobalVariables.globalvars.gemAmount++;
+            GlobalVariables.globalvars.newGems++;
       }
 
     }
