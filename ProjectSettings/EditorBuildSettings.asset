@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Maze3.unity
     guid: 2e8c65f153a645747918b4154ec01ea2
+  - enabled: 1
+    path: Assets/Scenes/YouDied.unity
+    guid: 6f5380aebfd1b2146a82d8ef948872e0
   m_configObjects: {}
