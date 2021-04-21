@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
                 GlobalVariables.globalvars.armorLevel = 1; //added
                 GlobalVariables.globalvars.weaponLevel = 1; //added
                 GlobalVariables.globalvars.enemyPower = 10; //added
-                SceneManager.LoadScene(sceneName: "MainMenu");
+                SceneManager.LoadScene(sceneName: "YouDied");
                 GlobalVariables.globalvars.newGems = 0;
             }
             else
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
             if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower * 2)
             {
                 Destroy(gameObject);
-                SceneManager.LoadScene(sceneName: "MainMenu");
+                SceneManager.LoadScene(sceneName: "YouDied");
                 healthBar.SetHealth(0);  //added
                 GlobalVariables.globalvars.armorLevel = 1; //added
                 GlobalVariables.globalvars.weaponLevel = 1; //added
@@ -121,7 +121,7 @@ public class PlayerController : MonoBehaviour
             if (GlobalVariables.globalvars.playerHealth <= GlobalVariables.globalvars.enemyPower * 5)
             {
                 Destroy(gameObject);
-                SceneManager.LoadScene(sceneName: "MainMenu");
+                SceneManager.LoadScene(sceneName: "YouDied");
                 healthBar.SetHealth(0);  //added
                 GlobalVariables.globalvars.armorLevel = 1; //added
                 GlobalVariables.globalvars.weaponLevel = 1; //added
