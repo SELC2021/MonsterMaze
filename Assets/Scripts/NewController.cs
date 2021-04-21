@@ -27,8 +27,8 @@ public class NewController : MonoBehaviour
         Restart();
         if (alive)
         {
-            Hurt();
-            Die();
+            //Hurt();
+            //Die();
             Attack();
             Run();
 
@@ -103,14 +103,14 @@ public class NewController : MonoBehaviour
 
     void Hurt()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
+        //if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
             anim.SetTrigger("hurt");
-            if (direction == 1)
-                rb.AddForce(new Vector2(-5f, 1f), ForceMode2D.Impulse);
-            else
-                rb.AddForce(new Vector2(5f, 1f), ForceMode2D.Impulse);
-        }
+            // if (direction == 1)
+            //     rb.AddForce(new Vector2(-5f, 1f), ForceMode2D.Impulse);
+            // else
+            //     rb.AddForce(new Vector2(5f, 1f), ForceMode2D.Impulse);
+        //}
     }
 
     void Die()
@@ -138,6 +138,10 @@ public class NewController : MonoBehaviour
 
         if (collision.gameObject.tag == "GemsC"){
            GlobalVariables.globalvars.gemAmount ++;
+        }
+
+        if (collision.gameObject.tag == "Enemy1"){
+          Hurt();
         }
 
     }
