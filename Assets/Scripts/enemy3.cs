@@ -27,7 +27,7 @@ public class enemy3 : MonoBehaviour
             {
                 position = gameObject.transform.position;
                 target = GameObject.Find("Wizard Variant").transform.position; //needs to say "Wizard Variant" to follow wizard girl
-                transform.position = Vector2.MoveTowards(transform.position, target, .1f);
+                transform.position = Vector2.MoveTowards(transform.position, target, .03f);
             }
           }
           else {
