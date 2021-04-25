@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                GlobalVariables.globalvars.playerHealth -= (GlobalVariables.globalvars.enemyPower * 5);
+                GlobalVariables.globalvars.playerHealth -= (GlobalVariables.globalvars.enemyPower * 3);
                 healthBar.SetHealth(GlobalVariables.globalvars.playerHealth);  //added
                 Debug.Log("player health: " + GlobalVariables.globalvars.playerHealth); //TEST
                 Debug.Log("Enemy power: " + GlobalVariables.globalvars.enemyPower); //TEST
